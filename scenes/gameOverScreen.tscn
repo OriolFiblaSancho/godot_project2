@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn64w68e6sec7"]
+
+[ext_resource type="Script" path="res://scripts/gameOverScreen.gd" id="1_b4j2m"]
+
+[node name="GameOverScreen" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_b4j2m")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1202.0
+offset_bottom = 681.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 196.0
+offset_top = 120.0
+offset_right = 930.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 128
+text = "GAME OVER"
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 305.0
+offset_top = 392.0
+offset_right = 811.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 49
+text = "TRY AGAIN"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

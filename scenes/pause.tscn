@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c11dnaie0kta3"]
+
+[ext_resource type="Script" path="res://scripts/pause.gd" id="1_07d52"]
+
+[node name="Pause" type="CanvasLayer"]
+script = ExtResource("1_07d52")
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 750.0
+offset_bottom = 449.0
+
+[node name="Panel" type="Panel" parent="Container"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="Quit" type="Button" parent="Container/Panel"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 269.0
+offset_right = 717.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 70
+text = "QUIT"
+
+[node name="Label" type="Label" parent="Container/Panel"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 16.0
+offset_right = 892.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 150
+text = "PAUSE"
+
+[connection signal="pressed" from="Container/Panel/Quit" to="." method="_on_quit_pressed"]

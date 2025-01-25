@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b807gq0edf81u"]
+
+[ext_resource type="Script" path="res://scripts/GUI.gd" id="1_0bx6t"]
+[ext_resource type="Texture2D" uid="uid://bfcja6pbtcbct" path="res://assets/ui/Health Bar Asset Pack 2 by Adwit Rahman/greenbar (3).png" id="2_g3i67"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8a1s"]
+bg_color = Color(0.933333, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ac6sw"]
+ProgressBar/colors/font_color = Color(0.95, 0.95, 0.95, 1)
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_x8a1s")
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_0bx6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(284, 124)
+scale = Vector2(3.62155, 3.62155)
+texture = ExtResource("2_g3i67")
+
+[node name="hpbar" type="ProgressBar" parent="."]
+offset_left = 89.0
+offset_top = 49.0
+offset_right = 442.0
+offset_bottom = 79.0
+theme = SubResource("Theme_ac6sw")
+max_value = 4.0
+value = 4.0
+show_percentage = false
